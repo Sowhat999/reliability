@@ -1,0 +1,146 @@
+repo_name: Sowhat999/reliability
+report_id: 6af42afde9345e854ee6b1843be8026b
+version: 0.1
+repo_type: Public
+timestamp: '2024-04-15T06:23:46+00:00'
+requested_by: MatthewReid854
+provider: github
+branch: master
+detected_tools_count: 11
+tools:
+- name: Python
+  description: A clear and powerful object-oriented programming language, comparable
+    to Perl, Ruby, Scheme, or Java.
+  website_url: https://www.python.org
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/Sowhat999/reliability
+  detection_source: Repo Metadata
+- name: Matplotlib
+  description: A plotting library for the Python programming language
+  website_url: http://matplotlib.org
+  open_source: false
+  hosted_saas: false
+  category: Libraries
+  sub_category: Charting Libraries
+  image_url: https://img.stackshare.io/service/2993/2DZC4KaA_400x400.jpg
+  detection_source_url: https://github.com/Sowhat999/reliability/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: Matthew Reid
+  last_updated_on: 2023-05-15 10:53:19.000000000 Z
+- name: Codecov
+  description: Hosted coverage reports with awesome features to enhance your CI workflow
+  website_url: https://codecov.io/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Code Coverage
+  image_url: https://img.stackshare.io/service/2673/Codecov_Mark_Circle_Pink.png
+  detection_source_url: https://github.com/Sowhat999/reliability/blob/master/.github/workflows/codecov.yml
+  detection_source: ".github/workflows/codecov.yml"
+  last_updated_by: Matthew Reid
+  last_updated_on: 2021-02-25 04:32:44.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/Sowhat999/reliability
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/Sowhat999/reliability/blob/master/.github/workflows/build_and_test_on_linux.yml
+  detection_source: ".github/workflows/build_and_test_on_linux.yml"
+  last_updated_by: Matthew Reid
+  last_updated_on: 2020-12-20 05:26:46.000000000 Z
+- name: PyPI
+  description: A repository of software for the Python programming language
+  website_url: https://pypi.org/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Hosted Package Repository
+  image_url: https://img.stackshare.io/service/12572/-RIWgodF_400x400.jpg
+  detection_source_url: https://github.com/Sowhat999/reliability/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: MatthewReid854
+  last_updated_on: 2020-10-24 10:20:08.000000000 Z
+- name: NumPy
+  description: Fundamental package for scientific computing with Python
+  website_url: http://www.numpy.org/
+  version: 1.24.2
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Data Science Tools
+  image_url: https://img.stackshare.io/service/2179/default_332f874a2edb2686f578aa6389313efcea1eec41.png
+  detection_source_url: https://github.com/Sowhat999/reliability/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: MatthewReid854
+  last_updated_on: 2020-10-24 10:20:08.000000000 Z
+- name: SciPy
+  description: Scientific Computing Tools for Python
+  website_url: http://www.scipy.org
+  version: 1.10.1
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Data Science Tools
+  image_url: https://img.stackshare.io/service/3303/scipyshiny_small.png
+  detection_source_url: https://github.com/Sowhat999/reliability/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: MatthewReid854
+  last_updated_on: 2020-10-24 10:20:08.000000000 Z
+- name: docutils
+  description: "http://t.co/lH6rcPxBja Service Outage and other informational alerts.\r\n\r\nFor
+    support, see ticket/IRC/email information on http://t.co/nE5akSwLqM"
+  website_url: http://docutils.sourceforge.net/
+  open_source: false
+  hosted_saas: false
+  image_url: https://img.stackshare.io/service/8480/LI68uG-2_normal.jpg
+  detection_source_url: https://github.com/Sowhat999/reliability/blob/master/setup.py
+  detection_source: setup.py
+  last_updated_by: MatthewReid854
+  last_updated_on: 2021-11-09 08:55:25.000000000 Z
+- name: docutils
+  description: Docutils -- Python Documentation Utilities
+  package_url: https://pypi.org/project/docutils
+  version: '0.18'
+  license: Unlicense,Python-2.0,BSD-2-Clause,CNRI-Python-GPL-Compatible
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19874/default_7ed3c4ccf2a3218ae3655165b980bd4a90a445dc.png
+  detection_source_url: https://github.com/Sowhat999/reliability/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: Matthew Reid
+  last_updated_on: 2023-02-21 10:54:49.000000000 Z
+- name: pandas
+  description: Powerful data structures for data analysis
+  package_url: https://pypi.org/project/pandas
+  version: 2.0.1
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: PyPI Packages
+  image_url: https://img.stackshare.io/package/19837/default_85689b353a3a9409328e253ea28d859d29151e0c.png
+  detection_source_url: https://github.com/Sowhat999/reliability/blob/master/requirements.txt
+  detection_source: requirements.txt
+  last_updated_by: Matthew Reid
+  last_updated_on: 2023-05-15 10:53:19.000000000 Z
