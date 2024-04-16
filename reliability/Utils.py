@@ -2368,7 +2368,7 @@ class ALT_fitters_input_checking:
         self.optimizer = optimizer
         self.use_level_stress = use_level_stress
         self.failure_groups = failure_groups[::-1]
-        if right_censored_groups is None:
+        if right_censored_groups == None:
             self.right_censored_groups = right_censored_groups
         else:
             self.right_censored_groups = right_censored_groups[::-1]
