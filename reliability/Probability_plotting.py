@@ -59,6 +59,7 @@ from reliability.Utils import (
     colorprint,
     xy_downsample,
 )
+import math
 
 np.seterr("ignore")
 dec = 3  # number of decimals to use when rounding fitted parameters in labels
@@ -125,7 +126,7 @@ def plotting_positions(failures=None, right_censored=None, a=None):
     df = pd.DataFrame(data, columns=["times", "cens_codes"])
     df_sorted = df.sort_values(by="times")
     df_sorted["reverse_i"] = np.arange(1, n + 1)[::-1]
-    failure_rows = df_sorted.loc[df_sorted["cens_codes"] == 1.0]
+    failure_rows = df_sorted.loc[math.isclose(df_sorted["cens_codes"], 1.0, rel_tol=1e-09, abs_tol=0.0)]
     reverse_i = failure_rows["reverse_i"].values
     len_reverse_i = len(reverse_i)
     leading_cens = np.where(df_sorted["cens_codes"].values == 1)[0][0]
@@ -2429,7 +2430,7 @@ def PP_plot_semiparametric(
             print_results=False,
         )
         df = KM.results
-        failure_rows = df.loc[df["Censoring code (censored=0)"] == 1.0]
+        failure_rows = df.loc[math.isclose(df["Censoring code (censored=0)"], 1.0, rel_tol=1e-09, abs_tol=0.0)]
         ecdf = 1 - np.array(failure_rows["Kaplan-Meier Estimate"].values)
         xlabel = "Empirical CDF (Kaplan-Meier estimate)"
     elif method == "NA":
@@ -2440,7 +2441,7 @@ def PP_plot_semiparametric(
             print_results=False,
         )
         df = NA.results
-        failure_rows = df.loc[df["Censoring code (censored=0)"] == 1.0]
+        failure_rows = df.loc[math.isclose(df["Censoring code (censored=0)"], 1.0, rel_tol=1e-09, abs_tol=0.0)]
         ecdf = 1 - np.array(failure_rows["Nelson-Aalen Estimate"].values)
         xlabel = "Empirical CDF (Nelson-Aalen estimate)"
     elif method == "RA":
@@ -2452,7 +2453,7 @@ def PP_plot_semiparametric(
             a=a,
         )
         df = RA.results
-        failure_rows = df.loc[df["Censoring code (censored=0)"] == 1.0]
+        failure_rows = df.loc[math.isclose(df["Censoring code (censored=0)"], 1.0, rel_tol=1e-09, abs_tol=0.0)]
         ecdf = 1 - np.array(failure_rows["Rank Adjustment Estimate"].values)
         xlabel = "Empirical CDF (Rank Adjustment estimate)"
     else:
@@ -2614,7 +2615,7 @@ def QQ_plot_semiparametric(
             print_results=False,
         )
         df = KM.results
-        failure_rows = df.loc[df["Censoring code (censored=0)"] == 1.0]
+        failure_rows = df.loc[math.isclose(df["Censoring code (censored=0)"], 1.0, rel_tol=1e-09, abs_tol=0.0)]
         ecdf = 1 - np.array(failure_rows["Kaplan-Meier Estimate"].values)
         method_str = "Kaplan-Meier"
     elif method == "NA":
@@ -2625,7 +2626,7 @@ def QQ_plot_semiparametric(
             print_results=False,
         )
         df = NA.results
-        failure_rows = df.loc[df["Censoring code (censored=0)"] == 1.0]
+        failure_rows = df.loc[math.isclose(df["Censoring code (censored=0)"], 1.0, rel_tol=1e-09, abs_tol=0.0)]
         ecdf = 1 - np.array(failure_rows["Nelson-Aalen Estimate"].values)
         method_str = "Nelson-Aalen"
     elif method == "RA":
@@ -2637,7 +2638,7 @@ def QQ_plot_semiparametric(
             a=a,
         )
         df = RA.results
-        failure_rows = df.loc[df["Censoring code (censored=0)"] == 1.0]
+        failure_rows = df.loc[math.isclose(df["Censoring code (censored=0)"], 1.0, rel_tol=1e-09, abs_tol=0.0)]
         ecdf = 1 - np.array(failure_rows["Rank Adjustment Estimate"].values)
         method_str = "Rank Adjustment"
     else:
